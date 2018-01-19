@@ -1,0 +1,30 @@
+{
+  "name": "tvories-localadmins",
+  "version": "0.1.0",
+  "author": "Taylor Vories",
+  "summary": "Shows local administrators on Windows machines.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/tvories/local_administrators_win",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2008 R2",
+        "2012 R2",
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "pdk-version": "1.3.2",
+  "template-url": "file://C:/PROGRA~1/PUPPET~1/DevelopmentKit/share/cache/pdk-templates.git",
+  "template-ref": "1.3.2-0-g07678c8"
+}
