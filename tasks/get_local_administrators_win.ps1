@@ -1,4 +1,4 @@
-# Puppet Task Name: get_local_administrators
+# Puppet Task Name: get_local_administrators_win
 #
 
 $admins = get-wmiobject -computername $env:computername -Credential $Credential -query "select * from win32_groupuser where GroupComponent=""Win32_Group.Domain='$env:computername',Name='administrators'""" | % {$_.partcomponent}
