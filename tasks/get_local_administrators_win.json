@@ -2,6 +2,5 @@
   "puppet_task_version": 1,
   "supports_noop": false,
   "description": "gets local administrators",
-  "input_method": "powershell",
   "parameters": {}
 }
