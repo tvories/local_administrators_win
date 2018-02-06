@@ -18,4 +18,4 @@ $admins = get-wmiobject -computername $env:computername -Credential $Credential 
         $objreport+=@($objoutput)
     }#end for
 
-    ConvertTo-Json Input-Object $objreport -Compress
+    ConvertTo-Json -InputObject $objreport -Compress
