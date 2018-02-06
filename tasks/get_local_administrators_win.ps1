@@ -4,8 +4,8 @@
 $admins = get-wmiobject -computername $env:computername -Credential $Credential -query "select * from win32_groupuser where GroupComponent=""Win32_Group.Domain='$env:computername',Name='administrators'""" | % {$_.partcomponent}
 
     foreach ($admin in $admins) {
-                $admin = $admin.replace("\\$computername\root\cimv2:Win32_UserAccount.Domain=","") # trims the results for a user
-                $admin = $admin.replace("\\$computername\root\cimv2:Win32_Group.Domain=","") # trims the results for a group
+                $admin = $admin.replace("\\$computername\root\Win32_UserAccount.Domain=","") # trims the results for a user
+                $admin = $admin.replace("\\$computername\root\Win32_Group.Domain=","") # trims the results for a group
                 $admin = $admin.replace('Name="',"")
                 $admin = $admin.Replace("`"","")
                 $admin = $admin.split(",")
